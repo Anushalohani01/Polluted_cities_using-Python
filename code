@@ -1,0 +1,112 @@
+# Install required packages (if not already installed)
+!pip install geopy folium
+
+import folium
+from geopy.geocoders import Nominatim
+import time
+
+# Sample data: 20 polluted cities (city name, country, rank, and AQI value)
+cities = [
+    {"city": "Delhi", "country": "India", "rank": 1, "AQI": 285},
+    {"city": "Kolkata", "country": "India", "rank": 2, "AQI": 263},
+    {"city": "Dhaka", "country": "Bangladesh", "rank": 3, "AQI": 208},
+    {"city": "Tehran", "country": "Iran", "rank": 4, "AQI": 184},
+    {"city": "Mumbai", "country": "India", "rank": 5, "AQI": 183},
+    {"city": "Tashkent", "country": "Uzbekistan", "rank": 6, "AQI": 178},
+    {"city": "Krasnoyarsk", "country": "Russia", "rank": 7, "AQI": 172},
+    {"city": "Medan", "country": "Indonesia", "rank": 8, "AQI": 169},
+    {"city": "Yangon", "country": "Myanmar", "rank": 9, "AQI": 167},
+    {"city": "Phnom Penh", "country": "Cambodia", "rank": 10, "AQI": 167},
+    {"city": "Kathmandu", "country": "Nepal", "rank": 11, "AQI": 164},
+    {"city": "Beijing", "country": "China", "rank": 12, "AQI": 164},
+    {"city": "Lahore", "country": "Pakistan", "rank": 13, "AQI": 161},
+    {"city": "Bishkek", "country": "Kyrgyzstan", "rank": 14, "AQI": 159},
+    {"city": "Karachi", "country": "Pakistan", "rank": 15, "AQI": 158},
+    {"city": "Chongqing", "country": "China", "rank": 16, "AQI": 152},
+    {"city": "Bangkok", "country": "Thailand", "rank": 17, "AQI": 149},
+    {"city": "Istanbul", "country": "Turkey", "rank": 18, "AQI": 146},
+    {"city": "Kabul", "country": "Afghanistan", "rank": 19, "AQI": 143},
+    {"city": "Dakar", "country": "Senegal", "rank": 20, "AQI": 140}
+]
+
+# Initialize the geocoder
+geolocator = Nominatim(user_agent="polluted_cities_mapper")
+
+def get_lat_lon(city, country):
+    try:
+        location = geolocator.geocode(f"{city}, {country}")
+        if location:
+            return location.latitude, location.longitude
+        else:
+            return None, None
+    except Exception as e:
+        print(f"Error geocoding {city}, {country}: {e}")
+        return None, None
+
+# Get coordinates for each city (include a delay to respect Nominatim's rate limit)
+for entry in cities:
+    lat, lon = get_lat_lon(entry["city"], entry["country"])
+    entry["lat"] = lat
+    entry["lon"] = lon
+    time.sleep(1)
+
+# Print the updated city data (optional)
+for entry in cities:
+    print(f"{entry['city']}, {entry['country']}: {entry['lat']}, {entry['lon']}")
+
+# Create a Folium map (global view)
+m = folium.Map(location=[20, 0], zoom_start=2)
+
+# Loop over the cities and add markers with color based on rank
+for entry in cities:
+    if entry["lat"] and entry["lon"]:
+        # Determine marker color based on rank
+        if entry["rank"] <= 5:
+            marker_color = "red"
+        elif entry["rank"] <= 10:
+            marker_color = "blue"
+        elif entry["rank"] <= 15:
+            marker_color = "green"
+        else:
+            marker_color = "purple"
+
+        # Prepare popup text
+        popup_text = (
+            f"<b>City:</b> {entry['city']}<br>"
+            f"<b>Country:</b> {entry['country']}<br>"
+            f"<b>Rank:</b> {entry['rank']}<br>"
+            f"<b>AQI:</b> {entry['AQI']}"
+        )
+
+        # Add marker to the map
+        folium.Marker(
+            location=[entry["lat"], entry["lon"]],
+            popup=folium.Popup(popup_text, max_width=300),
+            tooltip=entry["city"],
+            icon=folium.Icon(color=marker_color)
+        ).add_to(m)
+
+# Define custom legend HTML; positioned in the lower right corner
+legend_html = '''
+     <div style="
+         position: fixed;
+         bottom: 50px; right: 50px;
+         width: 160px; height: 140px;
+         border:2px solid grey;
+         z-index:9999;
+         font-size:14px;
+         background-color:white;
+         opacity: 0.8;
+         padding: 10px;
+         ">
+     <b>Legend</b> <br>
+     Ranks 1-5: <i class="fa fa-map-marker" style="color:red"></i><br>
+     Ranks 6-10: <i class="fa fa-map-marker" style="color:blue"></i><br>
+     Ranks 11-15: <i class="fa fa-map-marker" style="color:green"></i><br>
+     Ranks 16-20: <i class="fa fa-map-marker" style="color:purple"></i>
+     </div>
+     '''
+m.get_root().html.add_child(folium.Element(legend_html))
+
+# Display the map in Google Colab
+m
