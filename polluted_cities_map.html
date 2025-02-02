@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_98894a1910dca4c2edb7577ad048b84d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_98894a1910dca4c2edb7577ad048b84d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_98894a1910dca4c2edb7577ad048b84d = L.map(
+                "map_98894a1910dca4c2edb7577ad048b84d",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 20,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_26dfdb5f529c6321dcbeb22882b55815 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_26dfdb5f529c6321dcbeb22882b55815.addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var marker_865b73041a8fe3de5bd8fae2711cd754 = L.marker(
+                [28.6273928, 77.1716954],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_bf785d1e1e19698dfddc62c546afdfed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_865b73041a8fe3de5bd8fae2711cd754.setIcon(icon_bf785d1e1e19698dfddc62c546afdfed);
+        
+    
+        var popup_aec7ab5beb16406d534cd5bb9a0496cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6fa2b56e11642b3084e3843e40d6ad47 = $(`<div id="html_6fa2b56e11642b3084e3843e40d6ad47" style="width: 100.0%; height: 100.0%;"><b>City:</b> Delhi<br><b>Country:</b> India<br><b>Rank:</b> 1<br><b>AQI:</b> 285</div>`)[0];
+                popup_aec7ab5beb16406d534cd5bb9a0496cf.setContent(html_6fa2b56e11642b3084e3843e40d6ad47);
+            
+        
+
+        marker_865b73041a8fe3de5bd8fae2711cd754.bindPopup(popup_aec7ab5beb16406d534cd5bb9a0496cf)
+        ;
+
+        
+    
+    
+            marker_865b73041a8fe3de5bd8fae2711cd754.bindTooltip(
+                `<div>
+                     Delhi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba5ec897bf626131e8d88811e701026d = L.marker(
+                [22.5726459, 88.3638953],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_2721000f45650924bc525d91b2caed83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ba5ec897bf626131e8d88811e701026d.setIcon(icon_2721000f45650924bc525d91b2caed83);
+        
+    
+        var popup_d9009cb57230b3c759f198de942b4f1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9affda09437b4801d0f194c2484a7130 = $(`<div id="html_9affda09437b4801d0f194c2484a7130" style="width: 100.0%; height: 100.0%;"><b>City:</b> Kolkata<br><b>Country:</b> India<br><b>Rank:</b> 2<br><b>AQI:</b> 263</div>`)[0];
+                popup_d9009cb57230b3c759f198de942b4f1d.setContent(html_9affda09437b4801d0f194c2484a7130);
+            
+        
+
+        marker_ba5ec897bf626131e8d88811e701026d.bindPopup(popup_d9009cb57230b3c759f198de942b4f1d)
+        ;
+
+        
+    
+    
+            marker_ba5ec897bf626131e8d88811e701026d.bindTooltip(
+                `<div>
+                     Kolkata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4fd0605427e180de27dfb0e3123e8bad = L.marker(
+                [23.7544529, 90.393336],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_ba71e8a0b8bfe292e77e977478117213 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4fd0605427e180de27dfb0e3123e8bad.setIcon(icon_ba71e8a0b8bfe292e77e977478117213);
+        
+    
+        var popup_4ed29f2463d9627bf6cbce8fa81c2635 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6cb819058e53db543fc37406039e34db = $(`<div id="html_6cb819058e53db543fc37406039e34db" style="width: 100.0%; height: 100.0%;"><b>City:</b> Dhaka<br><b>Country:</b> Bangladesh<br><b>Rank:</b> 3<br><b>AQI:</b> 208</div>`)[0];
+                popup_4ed29f2463d9627bf6cbce8fa81c2635.setContent(html_6cb819058e53db543fc37406039e34db);
+            
+        
+
+        marker_4fd0605427e180de27dfb0e3123e8bad.bindPopup(popup_4ed29f2463d9627bf6cbce8fa81c2635)
+        ;
+
+        
+    
+    
+            marker_4fd0605427e180de27dfb0e3123e8bad.bindTooltip(
+                `<div>
+                     Dhaka
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6a776bea44d1995c3bf3157982225415 = L.marker(
+                [35.6892523, 51.3896004],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_f73580c813c1991548d3c9b23917b879 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_6a776bea44d1995c3bf3157982225415.setIcon(icon_f73580c813c1991548d3c9b23917b879);
+        
+    
+        var popup_260004cb78fde5a5ac247cdf6a0f29c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2ae9200787406b1793bc5ed5287d0bd = $(`<div id="html_a2ae9200787406b1793bc5ed5287d0bd" style="width: 100.0%; height: 100.0%;"><b>City:</b> Tehran<br><b>Country:</b> Iran<br><b>Rank:</b> 4<br><b>AQI:</b> 184</div>`)[0];
+                popup_260004cb78fde5a5ac247cdf6a0f29c4.setContent(html_a2ae9200787406b1793bc5ed5287d0bd);
+            
+        
+
+        marker_6a776bea44d1995c3bf3157982225415.bindPopup(popup_260004cb78fde5a5ac247cdf6a0f29c4)
+        ;
+
+        
+    
+    
+            marker_6a776bea44d1995c3bf3157982225415.bindTooltip(
+                `<div>
+                     Tehran
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c3ba78bf35569cf35b3bcc416d05d8d = L.marker(
+                [19.054999, 72.8692035],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_234ea28f6517a114bf267967e4b68429 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_5c3ba78bf35569cf35b3bcc416d05d8d.setIcon(icon_234ea28f6517a114bf267967e4b68429);
+        
+    
+        var popup_d49ec0404ea6c25587b746b5e5ebc7c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f8b8b578f50081563b308a8573ebd5fd = $(`<div id="html_f8b8b578f50081563b308a8573ebd5fd" style="width: 100.0%; height: 100.0%;"><b>City:</b> Mumbai<br><b>Country:</b> India<br><b>Rank:</b> 5<br><b>AQI:</b> 183</div>`)[0];
+                popup_d49ec0404ea6c25587b746b5e5ebc7c4.setContent(html_f8b8b578f50081563b308a8573ebd5fd);
+            
+        
+
+        marker_5c3ba78bf35569cf35b3bcc416d05d8d.bindPopup(popup_d49ec0404ea6c25587b746b5e5ebc7c4)
+        ;
+
+        
+    
+    
+            marker_5c3ba78bf35569cf35b3bcc416d05d8d.bindTooltip(
+                `<div>
+                     Mumbai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1c84c02277e18480c8d3652d115e6c28 = L.marker(
+                [41.3123363, 69.2787079],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_5d54299981b241bc1c078b2b0f730cc8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_1c84c02277e18480c8d3652d115e6c28.setIcon(icon_5d54299981b241bc1c078b2b0f730cc8);
+        
+    
+        var popup_21da158c2ab81ae756079f6dfab59bc8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b98c26a1ae03061059c1f1bd5f634b73 = $(`<div id="html_b98c26a1ae03061059c1f1bd5f634b73" style="width: 100.0%; height: 100.0%;"><b>City:</b> Tashkent<br><b>Country:</b> Uzbekistan<br><b>Rank:</b> 6<br><b>AQI:</b> 178</div>`)[0];
+                popup_21da158c2ab81ae756079f6dfab59bc8.setContent(html_b98c26a1ae03061059c1f1bd5f634b73);
+            
+        
+
+        marker_1c84c02277e18480c8d3652d115e6c28.bindPopup(popup_21da158c2ab81ae756079f6dfab59bc8)
+        ;
+
+        
+    
+    
+            marker_1c84c02277e18480c8d3652d115e6c28.bindTooltip(
+                `<div>
+                     Tashkent
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c85a77526653a9760a36f92965a1b253 = L.marker(
+                [56.0091173, 92.872586],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_6cd39f32ffa450d9597762068e10b440 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c85a77526653a9760a36f92965a1b253.setIcon(icon_6cd39f32ffa450d9597762068e10b440);
+        
+    
+        var popup_2d51df23c77bb7cb42d8fca822f941d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e903ae3ea40bb2c80932a1a0d1d7e71a = $(`<div id="html_e903ae3ea40bb2c80932a1a0d1d7e71a" style="width: 100.0%; height: 100.0%;"><b>City:</b> Krasnoyarsk<br><b>Country:</b> Russia<br><b>Rank:</b> 7<br><b>AQI:</b> 172</div>`)[0];
+                popup_2d51df23c77bb7cb42d8fca822f941d5.setContent(html_e903ae3ea40bb2c80932a1a0d1d7e71a);
+            
+        
+
+        marker_c85a77526653a9760a36f92965a1b253.bindPopup(popup_2d51df23c77bb7cb42d8fca822f941d5)
+        ;
+
+        
+    
+    
+            marker_c85a77526653a9760a36f92965a1b253.bindTooltip(
+                `<div>
+                     Krasnoyarsk
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3dfc582a9c71ef517b651a95b1f70713 = L.marker(
+                [3.5896654, 98.6738261],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_21abe187de10eda18b80af7de58b2ca0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3dfc582a9c71ef517b651a95b1f70713.setIcon(icon_21abe187de10eda18b80af7de58b2ca0);
+        
+    
+        var popup_425590516bb34845136b5b72164d3077 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca1751a8300eb32f367e12c32e34c616 = $(`<div id="html_ca1751a8300eb32f367e12c32e34c616" style="width: 100.0%; height: 100.0%;"><b>City:</b> Medan<br><b>Country:</b> Indonesia<br><b>Rank:</b> 8<br><b>AQI:</b> 169</div>`)[0];
+                popup_425590516bb34845136b5b72164d3077.setContent(html_ca1751a8300eb32f367e12c32e34c616);
+            
+        
+
+        marker_3dfc582a9c71ef517b651a95b1f70713.bindPopup(popup_425590516bb34845136b5b72164d3077)
+        ;
+
+        
+    
+    
+            marker_3dfc582a9c71ef517b651a95b1f70713.bindTooltip(
+                `<div>
+                     Medan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4fe9470278fac4a1f1c6d075e15913e6 = L.marker(
+                [16.7967129, 96.1609916],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_fb89a63c0316b87f5f06fa2484fbd084 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4fe9470278fac4a1f1c6d075e15913e6.setIcon(icon_fb89a63c0316b87f5f06fa2484fbd084);
+        
+    
+        var popup_48c1cb8ac596627ad4742e508525f438 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5fd2978b9a45d2578e166e1a855869ea = $(`<div id="html_5fd2978b9a45d2578e166e1a855869ea" style="width: 100.0%; height: 100.0%;"><b>City:</b> Yangon<br><b>Country:</b> Myanmar<br><b>Rank:</b> 9<br><b>AQI:</b> 167</div>`)[0];
+                popup_48c1cb8ac596627ad4742e508525f438.setContent(html_5fd2978b9a45d2578e166e1a855869ea);
+            
+        
+
+        marker_4fe9470278fac4a1f1c6d075e15913e6.bindPopup(popup_48c1cb8ac596627ad4742e508525f438)
+        ;
+
+        
+    
+    
+            marker_4fe9470278fac4a1f1c6d075e15913e6.bindTooltip(
+                `<div>
+                     Yangon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_07be14e6a489cafae2c5a3f10cc72983 = L.marker(
+                [11.5730391, 104.857807],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_ad6506288db0a6d506c65bfcb87f3265 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_07be14e6a489cafae2c5a3f10cc72983.setIcon(icon_ad6506288db0a6d506c65bfcb87f3265);
+        
+    
+        var popup_e1cb2ebfcf78b204e293623384926619 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ebaeec666c9c3b397910e8973bc350da = $(`<div id="html_ebaeec666c9c3b397910e8973bc350da" style="width: 100.0%; height: 100.0%;"><b>City:</b> Phnom Penh<br><b>Country:</b> Cambodia<br><b>Rank:</b> 10<br><b>AQI:</b> 167</div>`)[0];
+                popup_e1cb2ebfcf78b204e293623384926619.setContent(html_ebaeec666c9c3b397910e8973bc350da);
+            
+        
+
+        marker_07be14e6a489cafae2c5a3f10cc72983.bindPopup(popup_e1cb2ebfcf78b204e293623384926619)
+        ;
+
+        
+    
+    
+            marker_07be14e6a489cafae2c5a3f10cc72983.bindTooltip(
+                `<div>
+                     Phnom Penh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_95c25e0efe327101c2a8c12a3f7884f5 = L.marker(
+                [27.708317, 85.3205817],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_ee5044136dd01871ce20f771612c884e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_95c25e0efe327101c2a8c12a3f7884f5.setIcon(icon_ee5044136dd01871ce20f771612c884e);
+        
+    
+        var popup_d3c99ed126cac26fb799222ac26392ae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a78dd31836a512facefe34984b4b7b8 = $(`<div id="html_0a78dd31836a512facefe34984b4b7b8" style="width: 100.0%; height: 100.0%;"><b>City:</b> Kathmandu<br><b>Country:</b> Nepal<br><b>Rank:</b> 11<br><b>AQI:</b> 164</div>`)[0];
+                popup_d3c99ed126cac26fb799222ac26392ae.setContent(html_0a78dd31836a512facefe34984b4b7b8);
+            
+        
+
+        marker_95c25e0efe327101c2a8c12a3f7884f5.bindPopup(popup_d3c99ed126cac26fb799222ac26392ae)
+        ;
+
+        
+    
+    
+            marker_95c25e0efe327101c2a8c12a3f7884f5.bindTooltip(
+                `<div>
+                     Kathmandu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2e1e705ad19d9662e723ca5cd8354807 = L.marker(
+                [40.190632, 116.412144],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_369580c2239a7d817ecf8a8808be8a5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2e1e705ad19d9662e723ca5cd8354807.setIcon(icon_369580c2239a7d817ecf8a8808be8a5e);
+        
+    
+        var popup_124233bc314f6f1c39fc991075dd71c1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_afaa22914a7722a75afddfd8afc688f7 = $(`<div id="html_afaa22914a7722a75afddfd8afc688f7" style="width: 100.0%; height: 100.0%;"><b>City:</b> Beijing<br><b>Country:</b> China<br><b>Rank:</b> 12<br><b>AQI:</b> 164</div>`)[0];
+                popup_124233bc314f6f1c39fc991075dd71c1.setContent(html_afaa22914a7722a75afddfd8afc688f7);
+            
+        
+
+        marker_2e1e705ad19d9662e723ca5cd8354807.bindPopup(popup_124233bc314f6f1c39fc991075dd71c1)
+        ;
+
+        
+    
+    
+            marker_2e1e705ad19d9662e723ca5cd8354807.bindTooltip(
+                `<div>
+                     Beijing
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9b640be05881e461161e6b72c4b3eeb0 = L.marker(
+                [31.5656822, 74.3141829],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_2534b1b43f807dc9a103f07868cbbaaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9b640be05881e461161e6b72c4b3eeb0.setIcon(icon_2534b1b43f807dc9a103f07868cbbaaf);
+        
+    
+        var popup_883e77ba2db0ad75a009be03e17640e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d128f0e2100450694bfe89bff8948ab = $(`<div id="html_9d128f0e2100450694bfe89bff8948ab" style="width: 100.0%; height: 100.0%;"><b>City:</b> Lahore<br><b>Country:</b> Pakistan<br><b>Rank:</b> 13<br><b>AQI:</b> 161</div>`)[0];
+                popup_883e77ba2db0ad75a009be03e17640e2.setContent(html_9d128f0e2100450694bfe89bff8948ab);
+            
+        
+
+        marker_9b640be05881e461161e6b72c4b3eeb0.bindPopup(popup_883e77ba2db0ad75a009be03e17640e2)
+        ;
+
+        
+    
+    
+            marker_9b640be05881e461161e6b72c4b3eeb0.bindTooltip(
+                `<div>
+                     Lahore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fa8b1ce45ed2913e668423f5954059f5 = L.marker(
+                [42.8777895, 74.6066926],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_acc68133cd0fc3bec6870fb45ada4e32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_fa8b1ce45ed2913e668423f5954059f5.setIcon(icon_acc68133cd0fc3bec6870fb45ada4e32);
+        
+    
+        var popup_8bb537e0f4ea43571fe05280c5571b6e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8004251303f86aa36b96503ca3108d80 = $(`<div id="html_8004251303f86aa36b96503ca3108d80" style="width: 100.0%; height: 100.0%;"><b>City:</b> Bishkek<br><b>Country:</b> Kyrgyzstan<br><b>Rank:</b> 14<br><b>AQI:</b> 159</div>`)[0];
+                popup_8bb537e0f4ea43571fe05280c5571b6e.setContent(html_8004251303f86aa36b96503ca3108d80);
+            
+        
+
+        marker_fa8b1ce45ed2913e668423f5954059f5.bindPopup(popup_8bb537e0f4ea43571fe05280c5571b6e)
+        ;
+
+        
+    
+    
+            marker_fa8b1ce45ed2913e668423f5954059f5.bindTooltip(
+                `<div>
+                     Bishkek
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_780ab8e3d93f472ff362e3fdfe9270b1 = L.marker(
+                [24.8546842, 67.0207055],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_3ec87166fff5223d28b642d46a8e0f40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_780ab8e3d93f472ff362e3fdfe9270b1.setIcon(icon_3ec87166fff5223d28b642d46a8e0f40);
+        
+    
+        var popup_8e1f034f679c3439cc1a625e5bf6e26b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5826c109b9b2ecdb277f4dd5ba491fc6 = $(`<div id="html_5826c109b9b2ecdb277f4dd5ba491fc6" style="width: 100.0%; height: 100.0%;"><b>City:</b> Karachi<br><b>Country:</b> Pakistan<br><b>Rank:</b> 15<br><b>AQI:</b> 158</div>`)[0];
+                popup_8e1f034f679c3439cc1a625e5bf6e26b.setContent(html_5826c109b9b2ecdb277f4dd5ba491fc6);
+            
+        
+
+        marker_780ab8e3d93f472ff362e3fdfe9270b1.bindPopup(popup_8e1f034f679c3439cc1a625e5bf6e26b)
+        ;
+
+        
+    
+    
+            marker_780ab8e3d93f472ff362e3fdfe9270b1.bindTooltip(
+                `<div>
+                     Karachi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_09f296fe7be6e8728e65ee859094feba = L.marker(
+                [30.05518, 107.8748712],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_2f4792793f35bbc34f3b7a36141ef960 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_09f296fe7be6e8728e65ee859094feba.setIcon(icon_2f4792793f35bbc34f3b7a36141ef960);
+        
+    
+        var popup_7e00d088d39bff38c503c32b0aad32b5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1041f528ec02a7a4251dd5b078749d73 = $(`<div id="html_1041f528ec02a7a4251dd5b078749d73" style="width: 100.0%; height: 100.0%;"><b>City:</b> Chongqing<br><b>Country:</b> China<br><b>Rank:</b> 16<br><b>AQI:</b> 152</div>`)[0];
+                popup_7e00d088d39bff38c503c32b0aad32b5.setContent(html_1041f528ec02a7a4251dd5b078749d73);
+            
+        
+
+        marker_09f296fe7be6e8728e65ee859094feba.bindPopup(popup_7e00d088d39bff38c503c32b0aad32b5)
+        ;
+
+        
+    
+    
+            marker_09f296fe7be6e8728e65ee859094feba.bindTooltip(
+                `<div>
+                     Chongqing
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f95cfef6084e230d5abe63aaaa63f746 = L.marker(
+                [13.7524938, 100.4935089],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_e9bfdfba0f792490f155c293579a24e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f95cfef6084e230d5abe63aaaa63f746.setIcon(icon_e9bfdfba0f792490f155c293579a24e7);
+        
+    
+        var popup_3538378c372db6ed7cc649e09794c711 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2766ab55e5a442fdd22e30088f7ded20 = $(`<div id="html_2766ab55e5a442fdd22e30088f7ded20" style="width: 100.0%; height: 100.0%;"><b>City:</b> Bangkok<br><b>Country:</b> Thailand<br><b>Rank:</b> 17<br><b>AQI:</b> 149</div>`)[0];
+                popup_3538378c372db6ed7cc649e09794c711.setContent(html_2766ab55e5a442fdd22e30088f7ded20);
+            
+        
+
+        marker_f95cfef6084e230d5abe63aaaa63f746.bindPopup(popup_3538378c372db6ed7cc649e09794c711)
+        ;
+
+        
+    
+    
+            marker_f95cfef6084e230d5abe63aaaa63f746.bindTooltip(
+                `<div>
+                     Bangkok
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8e2dd9cde6f918b070200a349ff2e1b5 = L.marker(
+                [41.0766019, 29.052495],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_21f7c23053fc4159d3db6b9c30029ca5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8e2dd9cde6f918b070200a349ff2e1b5.setIcon(icon_21f7c23053fc4159d3db6b9c30029ca5);
+        
+    
+        var popup_373eae91fa3ca0491444d813a48b488b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_add8deb828a27b20d1ddb0b121e69bfb = $(`<div id="html_add8deb828a27b20d1ddb0b121e69bfb" style="width: 100.0%; height: 100.0%;"><b>City:</b> Istanbul<br><b>Country:</b> Turkey<br><b>Rank:</b> 18<br><b>AQI:</b> 146</div>`)[0];
+                popup_373eae91fa3ca0491444d813a48b488b.setContent(html_add8deb828a27b20d1ddb0b121e69bfb);
+            
+        
+
+        marker_8e2dd9cde6f918b070200a349ff2e1b5.bindPopup(popup_373eae91fa3ca0491444d813a48b488b)
+        ;
+
+        
+    
+    
+            marker_8e2dd9cde6f918b070200a349ff2e1b5.bindTooltip(
+                `<div>
+                     Istanbul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_abaedfe6f87a3d92ab3127d6cfdf3106 = L.marker(
+                [34.5266431, 69.1849082],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_ce2d0f9d0d95b019986e0c8047765fbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_abaedfe6f87a3d92ab3127d6cfdf3106.setIcon(icon_ce2d0f9d0d95b019986e0c8047765fbe);
+        
+    
+        var popup_fd2db1257b8663748892252548cdb925 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2e3473388eaff9a75e34997e8832054 = $(`<div id="html_c2e3473388eaff9a75e34997e8832054" style="width: 100.0%; height: 100.0%;"><b>City:</b> Kabul<br><b>Country:</b> Afghanistan<br><b>Rank:</b> 19<br><b>AQI:</b> 143</div>`)[0];
+                popup_fd2db1257b8663748892252548cdb925.setContent(html_c2e3473388eaff9a75e34997e8832054);
+            
+        
+
+        marker_abaedfe6f87a3d92ab3127d6cfdf3106.bindPopup(popup_fd2db1257b8663748892252548cdb925)
+        ;
+
+        
+    
+    
+            marker_abaedfe6f87a3d92ab3127d6cfdf3106.bindTooltip(
+                `<div>
+                     Kabul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f948f702ecf3f4f6b7adf7d117f89c2 = L.marker(
+                [14.693425, -17.447938],
+                {
+}
+            ).addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+    
+            var icon_47efc049f190e37f7b2376a69044b4be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8f948f702ecf3f4f6b7adf7d117f89c2.setIcon(icon_47efc049f190e37f7b2376a69044b4be);
+        
+    
+        var popup_e57fd3639f89e836b0595b46b331972f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1aa6da4b336c4c45d42abafa42a8687c = $(`<div id="html_1aa6da4b336c4c45d42abafa42a8687c" style="width: 100.0%; height: 100.0%;"><b>City:</b> Dakar<br><b>Country:</b> Senegal<br><b>Rank:</b> 20<br><b>AQI:</b> 140</div>`)[0];
+                popup_e57fd3639f89e836b0595b46b331972f.setContent(html_1aa6da4b336c4c45d42abafa42a8687c);
+            
+        
+
+        marker_8f948f702ecf3f4f6b7adf7d117f89c2.bindPopup(popup_e57fd3639f89e836b0595b46b331972f)
+        ;
+
+        
+    
+    
+            marker_8f948f702ecf3f4f6b7adf7d117f89c2.bindTooltip(
+                `<div>
+                     Dakar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_26dfdb5f529c6321dcbeb22882b55815.addTo(map_98894a1910dca4c2edb7577ad048b84d);
+        
+</script>
+</html>
