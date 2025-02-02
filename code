@@ -110,3 +110,14 @@ m.get_root().html.add_child(folium.Element(legend_html))
 
 # Display the map in Google Colab
 m
+
+!pip install opencv-python pillow
+from google.colab import files
+
+# Save the map as an HTML file
+map_file = '/content/polluted_cities_map.html'
+m.save(map_file)
+
+# Download the HTML file
+files.download(map_file)
+
